@@ -20,7 +20,7 @@ COPY activiti-license/*.* $TOMCAT_DIR/lib/
 RUN yum install -y krb5-workstation
 
 COPY kerberos_files/krb5.conf /etc
-COPY kerberos_files/process.keytab /etc
+#COPY kerberos_files/process.keytab /etc
 COPY kerberos_files/java.login.config ${JAVA_HOME}/conf/security
 
 RUN chown -R root:root ${JAVA_HOME}/conf/security /etc/krb5.conf
