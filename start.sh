@@ -43,8 +43,7 @@ chmod 777 .keytabs/alfresco.keytab
 
 docker cp .keytabs/alfresco.keytab ${ALFRESCO}:/etc/alfresco.keytab
 docker cp .keytabs/alfresco.keytab ${SHARE}:/etc/share.keytab
-docker cp .keytabs/alfresco.keytab ${PROCES}:/etc/process.keytab
-#docker cp .keytabs/process.keytab ${PROCES}:/etc/process.keytab
+docker cp .keytabs/alfresco.keytab ${PROCESS}:/etc/process.keytab
 
 docker-compose restart alfresco
 docker-compose restart share
