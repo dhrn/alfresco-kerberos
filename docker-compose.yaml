@@ -226,7 +226,7 @@ services:
         alfresco-network:
 
   demoshell:
-      image: dhrn/demo-shell:bpm
+      image: dhrn/demo-shell:basic-bpm
       container_name: workspace
       hostname: workspace
       environment:
