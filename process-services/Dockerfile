@@ -1,4 +1,4 @@
-FROM alfresco/process-services:1.11.0
+FROM alfresco/process-services:1.11.4
 
 ARG TOMCAT_DIR=/usr/local/tomcat
 
