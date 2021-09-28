@@ -26,7 +26,7 @@ sn: Amber
 mail: alice@example.com
 postalCode: 88441
 telephoneNumber: 1234567890
-givenName: alice
+givenName: Alice
 o: Company Software Inc.
 userPassword: password
 
@@ -40,7 +40,7 @@ cn: Bob
 sn: Brown
 mail: bob@example.com
 telephoneNumber: 1234567890
-givenName: bob
+givenName: Bob
 o: Company Software Inc.
 postalCode: 88441
 street: Elm 5
@@ -57,7 +57,7 @@ cn: Dharan
 sn: G
 mail: dhrn@example.com
 telephoneNumber: 1234567890
-givenName: dhrn
+givenName: Dhrn
 o: Company Software Inc.
 postalCode: 88441
 street: Elm 5
@@ -90,9 +90,10 @@ objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
 cn: httpalfresco
-sn: Http Alfresco
+sn: Http
 uid: httpalfresco
 userPassword: password
+givenName: Alfresco
 mail: httpalfresco@example.com
 
 dn: uid=httpprocess,ou=People,{{ LDAP_BASE_DN }}
@@ -101,9 +102,10 @@ objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
 cn: httpprocess
-sn: Http Alfresco
+sn: Http
 uid: httpprocess
 userPassword: password
+givenName: Process
 mail: httprocess@example.com
 
 dn: uid=administrator,ou=People,{{ LDAP_BASE_DN }}
@@ -115,6 +117,7 @@ cn: administrator
 sn: User
 uid: administrator
 userPassword: password
+givenName: Administrator
 mail: administrator@example.com
 
 dn: ou=groups,{{ LDAP_BASE_DN }}
