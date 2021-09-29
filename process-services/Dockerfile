@@ -26,3 +26,4 @@ COPY kerberos_files/java.login.config ${JAVA_HOME}/lib/security
 
 RUN chown -R root:root ${JAVA_HOME}/conf/security /etc/krb5.conf ${JAVA_HOME}/lib/security
 RUN echo "login.config.url.1=file:${JAVA_HOME}/lib/security/java.login.config" >> ${JAVA_HOME}/conf/security/java.security
+RUN echo "login.config.url.1=file:${JAVA_HOME}/lib/security/java.login.config" >> ${JAVA_HOME}/lib/security/java.security
