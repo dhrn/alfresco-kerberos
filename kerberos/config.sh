@@ -38,8 +38,6 @@ create_config() {
  ticket_lifetime = 24h
  renew_lifetime = 7d
  forwardable = true
- default_tkt_enctypes = rc4-hmac
- default_tgs_enctypes = rc4-hmac
 
 [realms]
  $REALM = {
