@@ -2,7 +2,8 @@ printf "\n======== stop the running env ========\n\n"
 
 docker-compose down -v;
 sleep 20;
-rm -rf .keytabs && mkdir .keytabs;
+rm -rf .keytabs;
+mkdir .keytabs;
 
 printf "\n======== build and run docker images ========\n\n"
 docker-compose build;
@@ -36,7 +37,7 @@ ALFRESCO=$(docker-compose ps -q alfresco);
 SHARE=$(docker-compose ps -q share);
 PROCESS=$(docker-compose ps -q process);
 
-docker cp ${KERBEROS}:/alfresco.keytab .keytabs/
+docker cp ${KERBEROS}:/alfresco.keytab .keytabs
 #docker cp ${KERBEROS}:/process.keytab .keytabs/
 chmod 777 .keytabs/alfresco.keytab
 #chmod 777 .keytabs/process.keytab
