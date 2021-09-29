@@ -4,7 +4,6 @@ printf "\n======== stop the running env ========\n\n"
 
 rm -rf .keytabs && mkdir .keytabs;
 docker-compose down -v;
-lsof -i:88 && lsof -i:464 && lsof -i:749;
 sleep 20;
 
 printf "\n======== build and run docker images ========\n\n"
