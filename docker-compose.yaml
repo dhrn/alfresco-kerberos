@@ -116,11 +116,11 @@ services:
         alfresco-network:
 
   share:
-#    image: alfresco/alfresco-share:6.2.2
+    image: alfresco/alfresco-share:6.2.2
     container_name: share
     hostname: share
-    build:
-      context: ./share
+#    build:
+#      context: ./share
     extra_hosts:
       - "example.com:192.168.55.10"
     environment:
