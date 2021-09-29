@@ -1,9 +1,11 @@
+#!/bin/sh
+
 printf "\n======== stop the running env ========\n\n"
 
-docker-compose down -v;
-sleep 20;
 rm -rf .keytabs;
 mkdir .keytabs;
+docker-compose down -v;
+sleep 20;
 
 printf "\n======== build and run docker images ========\n\n"
 docker-compose build;
@@ -19,6 +21,7 @@ printf "\n======== indexing the LDAP user with Kerberos ========\n\n"
 docker exec -ti kerberos kadmin.local -q "addprinc -pw password -x dn=uid=alice,ou=People,dc=example,dc=com alice"
 docker exec -ti kerberos kadmin.local -q "addprinc -pw password  -x dn=uid=bob,ou=People,dc=example,dc=com bob"
 docker exec -ti kerberos kadmin.local -q "addprinc -pw password  -x dn=uid=dhrn,ou=People,dc=example,dc=com dhrn"
+docker exec -ti kerberos kadmin.local -q "addprinc -pw password  -x dn=uid=administrator,ou=People,dc=example,dc=com administrator"
 
 printf "\n======== create kerberos principles for server ========\n\n"
 # Add principles for Alfresco and generate keytab
