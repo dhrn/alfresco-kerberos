@@ -41,12 +41,12 @@ docker cp ${KERBEROS}:/alfresco.keytab .keytabs/
 chmod 777 .keytabs/alfresco.keytab
 #chmod 777 .keytabs/process.keytab
 
-docker cp .keytabs/alfresco.keytab ${ALFRESCO}:/etc/alfresco.keytab
-docker cp .keytabs/alfresco.keytab ${SHARE}:/etc/share.keytab
+#docker cp .keytabs/alfresco.keytab ${ALFRESCO}:/etc/alfresco.keytab
+#docker cp .keytabs/alfresco.keytab ${SHARE}:/etc/share.keytab
 docker cp .keytabs/alfresco.keytab ${PROCESS}:/etc/process.keytab
 
-docker-compose restart alfresco
-docker-compose restart share
+#docker-compose restart alfresco
+#docker-compose restart share
 docker-compose restart process
 
 printf "\n======== kerberos configuration is over. Here is the tail ========\n\n"
