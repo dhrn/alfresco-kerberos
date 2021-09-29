@@ -19,16 +19,16 @@ printf "\n======== indexing the LDAP user with Kerberos ========\n\n"
 
 ## index ldap user
 docker exec -ti kerberos kadmin.local -q "addprinc -pw password -x dn=uid=alice,ou=People,dc=example,dc=com alice"
-docker exec -ti kerberos kadmin.local -q "addprinc -pw password  -x dn=uid=bob,ou=People,dc=example,dc=com bob"
-docker exec -ti kerberos kadmin.local -q "addprinc -pw password  -x dn=uid=dhrn,ou=People,dc=example,dc=com dhrn"
-docker exec -ti kerberos kadmin.local -q "addprinc -pw password  -x dn=uid=administrator,ou=People,dc=example,dc=com administrator"
+docker exec -ti kerberos kadmin.local -q "addprinc -pw password -x dn=uid=bob,ou=People,dc=example,dc=com bob"
+docker exec -ti kerberos kadmin.local -q "addprinc -pw password -x dn=uid=dhrn,ou=People,dc=example,dc=com dhrn"
+docker exec -ti kerberos kadmin.local -q "addprinc -pw password -x dn=uid=administrator,ou=People,dc=example,dc=com administrator"
 
 printf "\n======== create kerberos principles for server ========\n\n"
 # Add principles for Alfresco and generate keytab
 docker exec -ti kerberos kadmin.local -q "addprinc -pw password -x dn=uid=httpalfresco,ou=People,dc=example,dc=com HTTP/example.com@EXAMPLE.COM"
 docker exec -ti kerberos kadmin.local -q "ktadd -k alfresco.keytab HTTP/example.com@EXAMPLE.COM"
 # Add principles for Process and generate keytab
-docker exec -ti kerberos kadmin.local -q "addprinc -pw password -x dn=uid=httpprocess,ou=People,dc=example,dc=com HTTP/process@EXAMPLE.COM"
+docker exec -ti kerberos kadmin.local -q "addprinc -kvno 0 -pw password -x dn=uid=httpprocess,ou=People,dc=example,dc=com HTTP/process@EXAMPLE.COM"
 docker exec -ti kerberos kadmin.local -q "ktadd -k process.keytab HTTP/process@EXAMPLE.COM"
 
 printf "\n======== Available principles in the kerberos ========\n\n"
