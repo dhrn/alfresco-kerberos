@@ -25,8 +25,8 @@ Below table provide info about scaffold users
 
 ### License
 
-* ACS - comes with 2 days free 
-* APS - Keep the licence inside `process-services/license` folder
+* ACS - comes with 2 days free license 
+* APS - keep the licence inside `process-services/license` folder
 
 ## More Info about environment
 
