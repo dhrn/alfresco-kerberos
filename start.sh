@@ -43,9 +43,9 @@ docker cp .keytabs/example.keytab ${ALFRESCO}:/etc/alfresco.keytab
 #docker cp .keytabs/example.keytab ${SHARE}:/etc/share.keytab
 docker cp .keytabs/example.keytab ${PROCESS}:/etc/process.keytab
 
-docker-compose restart alfresco
-#docker-compose restart share
-docker-compose restart process
-
-printf "\n======== kerberos configuration is over. Here is the tail ========\n\n"
-
+printf "\n======== kerberos configuration is over ======== \n\n"
+printf "Commands \n"
+printf " docker logs -f process \n"
+printf " docker logs -f alfresco \n"
+printf " docker exec -it process sh \n"
+printf " docker exec -it alfresco sh \n"
