@@ -4,16 +4,6 @@ objectclass: top
 objectclass: organizationalUnit
 ou: People
 
-dn: ou=RealmRoles,{{ LDAP_BASE_DN }}
-objectclass: top
-objectclass: organizationalUnit
-ou: RealmRoles
-
-dn: ou=FinanceRoles,{{ LDAP_BASE_DN }}
-objectclass: top
-objectclass: organizationalUnit
-ou: FinanceRoles
-
 # Add users
 dn: uid=alice,ou=People,{{ LDAP_BASE_DN }}
 objectclass: top
@@ -79,6 +69,7 @@ dn: uid=httpexample,ou=People,{{ LDAP_BASE_DN }}
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
+objectclass: inetOrgPerson
 cn: httpexample
 sn: Host
 uid: httpexample
