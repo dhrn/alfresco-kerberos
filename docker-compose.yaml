@@ -231,8 +231,8 @@ services:
       hostname: workspace
       environment:
         BASE_PATH: ./
-        APP_CONFIG_AUTH_TYPE: ECM
-        APP_CONFIG_KERBEROS_ENABLED: true
+        APP_CONFIG_AUTH_TYPE: "ECM"
+        APP_CONFIG_KERBEROS_ENABLED: "true"
       networks:
         alfresco-network:
 
