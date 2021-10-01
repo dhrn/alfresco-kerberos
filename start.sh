@@ -48,7 +48,7 @@ docker-compose restart alfresco
 docker-compose restart process
 
 printf "\n======== kerberos configuration is over ======== \n\n"
-printf "Commands \n"
+printf "usefull commands :\n"
 printf " docker logs -f process \n"
 printf " docker logs -f alfresco \n"
 printf " docker exec -it process sh \n"
