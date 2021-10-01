@@ -226,12 +226,13 @@ services:
         alfresco-network:
 
   demoshell:
-      image: dhrn/demo-shell:latest
+      image: dhrn/demo-shell:basic-bpm
       container_name: workspace
       hostname: workspace
       environment:
         BASE_PATH: ./
         APP_CONFIG_AUTH_TYPE: ECM
+        APP_CONFIG_KERBEROS_ENABLED: true
       networks:
         alfresco-network:
 
