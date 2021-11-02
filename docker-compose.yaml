@@ -226,7 +226,7 @@ services:
         alfresco-network:
 
   demoshell:
-      image: quay.io/alfresco/demo-shell:develop-33721
+      image: dhrn/demo-shell:latest
       container_name: workspace
       hostname: workspace
       environment:
